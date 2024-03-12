@@ -2,17 +2,18 @@ const express = require('express');
 const path = require('path');
 const app = express();
 const port = 3000;
+require('dotenv').config();
 
-// Define la ruta al directorio public
+
 const publicPath = path.join(__dirname, '../public');
 
-// Ruta para manejar la solicitud a la ruta raíz "/"
+
 app.get('/', (req, res) => {
-  // Envía el archivo HTML como respuesta
+
   res.sendFile(path.join(publicPath, 'bot_animation.html'));
 });
 
-// Escuchar en el puerto especificado
+
 app.listen(port, () => {
   console.log(`Servidor Express corriendo en http://localhost:${port}`);
 });
@@ -25,7 +26,8 @@ const moment = require('moment-timezone');
 moment.locale('es');
 moment.tz.setDefault('America/Santiago');
 
-const token = '6970964420:AAEYOyi7f4iPwlJ7UxVYdYLALUDAKZipQuM'; // Reemplaza 'TU_TOKEN' con tu token de Telegram
+const token = process.env.BOT_TOKEN;
+
 const bot = new Telegraf(token);
 
 const reminders = {};
