@@ -2,6 +2,10 @@
     "version": 2,
     "routes": [
       {
+        "src": "/",
+        "dest": "/public/bot_animation.html"
+      },
+      {
         "src": "/public/(.*)",
         "dest": "/public/$1"
       },
