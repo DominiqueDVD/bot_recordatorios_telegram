@@ -7,7 +7,7 @@
       },
       {
         "src": "/(.*)",
-        "dest": "recordatorio_bot.js"
+        "dest": "/src/recordatorio_bot.js"
       }
     ]
   }
