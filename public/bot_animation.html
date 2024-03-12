@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animación de Bots</title>
+  <style>
+    #animation {
+      font-size: 3em;
+    }
+  </style>
+</head>
+<body>
+  <div id="animation"></div>
+
+  <script>
+    function animateBots() {
+      const message = "El bot está corriendo!";
+      let i = 0;
+
+      setInterval(() => {
+        document.getElementById('animation').textContent = message.substring(0, i);
+        i++;
+        if (i > message.length) {
+          i = 0;
+        }
+      }, 100);
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      console.log('Iniciando el bot...');
+      animateBots();
+
+      setTimeout(() => {
+        console.log('El bot está corriendo.');
+      }, 5000); // Muestra el mensaje después de 5 segundos
+    });
+  </script>
+</body>
+</html>
+
