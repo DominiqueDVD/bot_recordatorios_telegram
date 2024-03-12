@@ -5,8 +5,7 @@
   "main": "src/recordatorio_bot.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node src/recordatorio_bot.js",
-    "build": "babel src -d dist"
+    "start": "node src/recordatorio_bot.js"
   },
   "keywords": [],
   "author": "",
